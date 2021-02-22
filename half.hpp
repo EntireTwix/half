@@ -128,11 +128,11 @@ public:
     }
     FLOAT16 operator*=(CONST FLOAT16 &rhs)
     {
-        return *this = ToFloat16Fast(ToFloat32Fast(*this) * ToFloat32Fast(rhs));
+        return *this = ToFloat32Fast(*this) * ToFloat32Fast(rhs);
     }
     FLOAT16 operator-=(CONST FLOAT16 &rhs)
     {
-        return *this = ToFloat16Fast(ToFloat32Fast(*this) - ToFloat32Fast(rhs));
+        return *this = ToFloat32Fast(*this) - ToFloat32Fast(rhs);
     }
     FLOAT16 operator+=(CONST FLOAT16 &rhs)
     {
