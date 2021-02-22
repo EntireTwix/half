@@ -123,7 +123,7 @@ public:
 
     FLOAT16 &operator=(CONST FLOAT32 &rhs)
     {
-        (*this) = ToFloat16(rhs);
+        (*this) = ToFloat16Fast(rhs);
         return (*this);
     }
     FLOAT16 operator*=(CONST FLOAT16 &rhs)
@@ -144,7 +144,7 @@ public:
     }
     operator FLOAT32()
     {
-        return ToFloat32(*this);
+        return ToFloat32Fast(*this);
     }
 
     //
